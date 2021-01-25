@@ -7,10 +7,10 @@ public class Calculator {
         this.a = a;
         this.b = b;
     }
-    public int getSum(int a, int b) {
+    public int getSum() {
         return a + b;
     }
-    public int getSubstract(int a, int b) {
+    public int getSubstract() {
         return a - b;
     }
 }
