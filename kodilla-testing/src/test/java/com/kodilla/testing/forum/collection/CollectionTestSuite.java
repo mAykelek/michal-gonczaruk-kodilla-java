@@ -35,6 +35,17 @@ class CollectionTestSuite {
         // Given
         OddNumbersExterminator test = new OddNumbersExterminator();
         List<Integer> numbers = new ArrayList<>();
+        numbers.add(0);
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        numbers.add(6);
+        numbers.add(7);
+        numbers.add(8);
+        numbers.add(9);
+        numbers.add(10);
         List<Integer> expectedResult = new ArrayList<>();
         expectedResult.add(0);
         expectedResult.add(2);
@@ -55,7 +66,6 @@ class CollectionTestSuite {
         // Given
         OddNumbersExterminator test = new OddNumbersExterminator();
         List<Integer> numbers = new ArrayList<>();
-        numbers.removeAll(numbers);
         List<Integer> expectedResult = new ArrayList<>();
         expectedResult.add(0);
         expectedResult.add(2);
