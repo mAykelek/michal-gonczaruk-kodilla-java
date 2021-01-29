@@ -67,12 +67,6 @@ class CollectionTestSuite {
         OddNumbersExterminator test = new OddNumbersExterminator();
         List<Integer> numbers = new ArrayList<>();
         List<Integer> expectedResult = new ArrayList<>();
-        expectedResult.add(0);
-        expectedResult.add(2);
-        expectedResult.add(4);
-        expectedResult.add(6);
-        expectedResult.add(8);
-        expectedResult.add(10);
         // When
         List<Integer> result = test.exterminate(numbers);
         // Then
