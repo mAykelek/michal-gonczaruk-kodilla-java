@@ -28,34 +28,45 @@ class CollectionTestSuite {
     }
 
     @DisplayName
-            ("Testing if class is working properly when its empty," +
-            " Testing if class is working properly when list contains objects" +
-            " Method should return collection with even numbers.")
+            ("Method should return collection with even numbers.")
 
     @Test
     void testOddNumbersExterminatorNormalList() {
         // Given
         OddNumbersExterminator test = new OddNumbersExterminator();
         List<Integer> numbers = new ArrayList<>();
-        for(int n = 0; n<11; n++) {
-            numbers.add(n);
-        }
+        List<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(0);
+        expectedResult.add(2);
+        expectedResult.add(4);
+        expectedResult.add(6);
+        expectedResult.add(8);
+        expectedResult.add(10);
+
         // When
-        boolean result1 = test.exterminate(List<Integer>);
+        List<Integer> result = test.exterminate(numbers);
         // Then
-        Assertions.assertTrue(result1);
-
-
+        Assertions.assertEquals(expectedResult, result);
     }
+    @DisplayName
+            ("Testing if class is working properly when its empty,")
     @Test
     void testOddNumbersExterminatorEmptyList() {
         // Given
         OddNumbersExterminator test = new OddNumbersExterminator();
         List<Integer> numbers = new ArrayList<>();
+        numbers.removeAll(numbers);
+        List<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(0);
+        expectedResult.add(2);
+        expectedResult.add(4);
+        expectedResult.add(6);
+        expectedResult.add(8);
+        expectedResult.add(10);
         // When
-        boolean result2 = test.exterminate(List<Integer>);
+        List<Integer> result = test.exterminate(numbers);
         // Then
-        Assertions.assertTrue(result2);
+        Assertions.assertEquals(expectedResult, result);
 
     }
 

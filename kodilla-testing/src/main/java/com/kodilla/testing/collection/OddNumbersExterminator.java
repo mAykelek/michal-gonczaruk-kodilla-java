@@ -8,24 +8,36 @@ public class OddNumbersExterminator {
         List<Integer> oddNumbers = new ArrayList<>();
         List<Integer> evenNumbers = new ArrayList<>();
         numbers = new ArrayList<>();
-        while (numbers.contains(numbers)) {
+        numbers.add(0);
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        numbers.add(6);
+        numbers.add(7);
+        numbers.add(8);
+        numbers.add(9);
+        numbers.add(10);
+
+
             for (int iteration : numbers) {
+
                 if (iteration % 2 == 0) {
                     System.out.println("Adding even number to collection.");
                     evenNumbers.add(iteration);
-                    if (iteration % 2 != 0) {
-                        System.out.println("Adding odd number to collection.");
-                        oddNumbers.add(iteration);
+                    } else {
+                    System.out.println("Adding odd number to collection.");
+                    oddNumbers.add(iteration);
                     }
-                    System.out.println("Odd numbers: " + oddNumbers);
+                System.out.println("Odd numbers: " + oddNumbers);
+                System.out.println("Even numbers: " + evenNumbers);
 
-                }
             }
-        }
-        System.out.println("Even numbers: ");
         return evenNumbers;
     }
 }
+
 
 
 
