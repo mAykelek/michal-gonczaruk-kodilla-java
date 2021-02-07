@@ -5,8 +5,8 @@ import com.kodilla.testing.forum.ForumPost;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShapeCollector {
-    private Shape shape;
+class ShapeCollector {
+/*    private Shape shape;
 
     public ShapeCollector(Shape shape) {
         this.shape = shape;
@@ -37,4 +37,8 @@ public class ShapeCollector {
     {
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.list.toArray();
+
+ */
     }
+
+

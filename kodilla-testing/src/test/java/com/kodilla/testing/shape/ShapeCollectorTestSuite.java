@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 
 @DisplayName("TDD: Shape Collector Test Suite")
 public class ShapeCollectorTestSuite {
+    /*
     private static int testCounter = 0;
 
     @BeforeAll
@@ -138,5 +139,7 @@ class TestTriangle {
 
 
     }
+
+     */
 }
 
