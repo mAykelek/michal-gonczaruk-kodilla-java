@@ -23,3 +23,4 @@ class BookDirectoryTestSuite {
     void testListBooksWithConditionFragmentShorterThan3() {
         assertTrue(false);
     }
+}
