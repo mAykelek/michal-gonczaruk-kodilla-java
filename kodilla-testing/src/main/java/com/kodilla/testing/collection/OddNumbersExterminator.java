@@ -2,7 +2,7 @@ package com.kodilla.testing.collection;
 
 import java.util.*;
 public class OddNumbersExterminator {
-
+/*
     public List<Integer> exterminate(List<Integer> numbers) {
 
         List<Integer> oddNumbers = new ArrayList<>();
@@ -22,7 +22,8 @@ public class OddNumbersExterminator {
 
             }
         return evenNumbers;
-    }
+}
+*/
 }
 
 

@@ -4,8 +4,8 @@ import java.util.Map;
 
 
 public class WeatherForecast {
-    private Temperatures temperatures;
-    public WeatherForecast(Temperatures temperatures) {
+/*    private Temperatures temperatures;
+    public WeatherForecast (Temperatures temperatures) {
         this.temperatures = temperatures;
     }
     public Map<String, Double> calculateForecast() {
@@ -17,4 +17,10 @@ public class WeatherForecast {
         }
         return resultMap;
     }
+    public double getAverage() {
+
+    }
+
+*/
 }
+
