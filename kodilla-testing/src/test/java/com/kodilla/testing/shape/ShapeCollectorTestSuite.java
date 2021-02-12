@@ -5,7 +5,7 @@ import org.junit.jupiter.api.*;
 
 @DisplayName("TDD: Shape Collector Test Suite")
 public class ShapeCollectorTestSuite {
-    /*
+
     private static int testCounter = 0;
 
     @BeforeAll
@@ -31,115 +31,42 @@ class TestSquare {
     void testAddSquare() {
 
         //Given
-        Shape square = new Square();
-        ShapeCollector select = new ShapeCollector(square);
+        Shape square = new Square("Square",50);
+        ShapeCollector select = new ShapeCollector();
         //When
-        select.addFigure();
+        select.addFigure(square);
         //Then
-        Assertions.assertEquals(1, select.getQuantityFigure());
+        Assertions.assertEquals(square, select.getFigure(0));
 
     }
+
     @Test
     void testRemoveSquare() {
 
         //Given
-        Shape square = new Square();
-        ShapeCollector select = new ShapeCollector(square);
-        select.addFigure("Circle", 50);
+        Shape square = new Square("Square", 50);
+        ShapeCollector select = new ShapeCollector();
+        select.addFigure(square);
         //When
-        boolean result = select.removeFigure(select);
+        boolean remove = select.removeFigure(square);
         //Then
-        Assertions.assertTrue(result);
-        Assertions.assertEquals(0, select.getQuantityFigure());
+        Assertions.assertTrue(remove);
 
     }
+
     @Test
     void testGetSquare() {
 
         //Given
-        Shape square = new Square();
-        ShapeCollector select = new ShapeCollector(square);
-        select.addFigure("Circle", 50);
+        Shape square = new Square("Square", 50);
+        ShapeCollector select = new ShapeCollector();
+        select.addFigure(square);
         //When
-        ShapeCollector expectedFigure;
-        expectedFigure = select.getFigure(0);
+        Shape retrievedSquare;
+        retrievedSquare = select.getFigure(0);
         //Then
-        Assertions.assertEquals(0, ;
+        Assertions.assertEquals(square, retrievedSquare);
 
     }
-    @Test
-    void testShowAll() {
-
-
-
-    }
-}
-@Nested
-@DisplayName("Test for Circle:")
-class TestCircle {
-    @Test
-    void testAddCircle() {
-        //Given
-        Shape circle = new Circle();
-        ShapeCollector select = new ShapeCollector(circle);
-        //When
-        select.addFigure();
-        //Then
-        Assertions.assertEquals(1, select.getQuantityFigure());
-    }
-    @Test
-    void testRemoveCircle() {
-
-
-
-    }
-    @Test
-    void testGetCircle() {
-
-
-
-    }
-    @Test
-    void testShowAll() {
-
-
-
-    }
-}
-@Nested
-@DisplayName("Test for Triangle:")
-class TestTriangle {
-    @Test
-    void testAddTriangle() {
-
-        //Given
-        Shape triangle = new Triangle();
-        ShapeCollector select = new ShapeCollector(triangle);
-        //When
-        select.addFigure();
-        //Then
-        Assertions.assertEquals(1, select.getQuantityFigure());
-
-    }
-    @Test
-    void testRemoveTriangle() {
-
-
-
-    }
-    @Test
-    void testGetTriangle() {
-
-
-
-    }
-    @Test
-    void testShowAll() {
-
-
-
-    }
-
-     */
 }
 

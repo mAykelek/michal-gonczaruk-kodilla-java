@@ -1,44 +1,32 @@
 package com.kodilla.testing.shape;
 
-import com.kodilla.testing.forum.ForumPost;
-
 import java.util.ArrayList;
 import java.util.List;
 
 class ShapeCollector {
-/*    private Shape shape;
+    List<Shape> list = new ArrayList<>();
 
-    public ShapeCollector(Shape shape) {
-        this.shape = shape;
+
+    public void addFigure(Shape shape) {
+        list.add(shape);
+
     }
-    public String getName() {
-    return name;
+
+    public boolean removeFigure(Shape shape) {
+        list.remove(shape);
+
+        return true;
+    }
+
+    public Shape getFigure(int n) {
+        return list.get(n);
+
+    }
+
+    public void showFigures() {
+        System.out.println(list);
+
     }
 }
-    private List<Shape> list = new ArrayList<>();
-
-    public void addFigure(Shape shape)
-    {
-        ShapeCollector shapeCollector = new ShapeCollector(Shape shape);
-        shapeCollector.list.add(getName(), getField());
-    }
-    public void removeFigure(Shape shape),
-    {
-        ShapeCollector shapeCollector = new ShapeCollector(Shape shape);
-        shapeCollector.list.remove(shape);
-    }
-
-    public int getFigure(int n)
-    {
-        ShapeCollector shapeCollector = new ShapeCollector(Shape shape);
-        shapeCollector.list.get(n);
-    }
-    public void showFigures()
-    {
-        ShapeCollector shapeCollector = new ShapeCollector();
-        shapeCollector.list.toArray();
-
- */
-    }
 
 

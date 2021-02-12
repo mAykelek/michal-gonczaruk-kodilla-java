@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class CollectionTestSuite {
-
+/*
     @BeforeAll
     public static void beforeAll(){
         System.out.println("Test Suite: begin");
@@ -73,5 +73,5 @@ class CollectionTestSuite {
         Assertions.assertEquals(expectedResult, result);
 
     }
-
+*/
 }
