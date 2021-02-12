@@ -62,10 +62,10 @@ class TestSquare {
         ShapeCollector select = new ShapeCollector();
         select.addFigure(square);
         //When
-        Shape retrievedSquare;
-        retrievedSquare = select.getFigure(0);
+        Shape takenSquare;
+        takenSquare = select.getFigure(0);
         //Then
-        Assertions.assertEquals(square, retrievedSquare);
+        Assertions.assertEquals(square, takenSquare);
 
     }
 }
