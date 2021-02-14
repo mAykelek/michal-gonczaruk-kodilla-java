@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookLibrary {
+    /*
+
+
     LibraryDatabase libraryDatabase;
 
     public BookLibrary(LibraryDatabase libraryDatabase) {
@@ -18,26 +21,33 @@ public class BookLibrary {
         bookList = resultList;
         return bookList;
     }
-    public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
-        List<Book> bookList = new ArrayList<Book>();
-        List<Book> borrowedList = libraryDatabase.listBooksInHandsOf(libraryUser);
-                /*
-        if(borrowedList.size() == 0) {
 
-                    return 0;
-                }
-                if(borrowedList.size() == 1) {
-                    return 1;
-                }
-
-                if(borrowedList.size() == 5) {
-                    return 5;
-                }
-                */
+    boolean rentABook(LibraryUser libraryUser, Book book){
 
 
-        return borrowedList;
 
     }
 
+    @Override
+    public int returnBooks(LibraryUser libraryUser) {
+        return 0;
+    }
+
+
+    public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
+        List<Book> borrowedList = libraryDatabase.listBooksInHandsOf(libraryUser);
+
+                if(borrowedList.size() == 0) {
+                    return borrowedList;
+                }
+                if(borrowedList.size() == 1) {
+                    return borrowedList;
+                }
+                if(borrowedList.size() == 5) {
+                    return borrowedList;
+                }
+        return borrowedList;
+
+    }
+*/
 }

@@ -15,6 +15,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class BookDirectoryTestSuite {
+    /*
 
     private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<>();
@@ -94,24 +95,26 @@ class BookDirectoryTestSuite {
     void testListBooksInHandsOf() {
         //Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        List<Book> theListOfBooks0 = new ArrayList<Book>();
+        List<Book> theListOfBooks0 = new ArrayList<>();
         List<Book> theListOfBooks1 = generateListOfNBooks(1);
         List<Book> theListOfBooks5 = generateListOfNBooks(5);
-        /*
-        when(libraryDatabaseMock.listBooksInHandsOf("Michal")).thenReturn(theListOfBooks0);
+
+        when(libraryDatabaseMock.listBooksInHandsOf("Michal", "Gonczaruk", 993423402)).thenReturn(theListOfBooks0);
         when(libraryDatabaseMock.listBooksInHandsOf("Szymon")).thenReturn(theListOfBooks1);
         when(libraryDatabaseMock.listBooksInHandsOf("Krystian")).thenReturn(theListOfBooks5);
 
         //When
-        List<Book> theListOfBooks0 = bookLibrary.listBooksInHandsOf("Michal");
-        List<Book> theListOfBooks1 = bookLibrary.listBooksInHandsOf("Szymon");
-        List<Book> theListOfBooks5 = bookLibrary.listBooksInHandsOf("Krystian");
-        */
+        theListOfBooks0 = bookLibrary.listBooksInHandsOf("Michal");
+        theListOfBooks1 = bookLibrary.listBooksInHandsOf("Szymon");
+        theListOfBooks5 = bookLibrary.listBooksInHandsOf("Krystian");
+
 
         //Then
         assertEquals(0, theListOfBooks0);
         assertEquals(1, theListOfBooks1);
         assertEquals(5, theListOfBooks5);
     }
+
+     */
 }
 

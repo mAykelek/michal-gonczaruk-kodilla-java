@@ -14,10 +14,11 @@ import java.util.Map;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class WeatherForecastTest {                                              // [7]
-/*
+class WeatherForecastTestSuite {
+    /*
     @Mock
     private Temperatures temperaturesMock;
+
     @Test                                                                      // [8]
     void testCalculateForecastWithMock() {                                     // [9]
         //Given
@@ -26,8 +27,8 @@ class WeatherForecastTest {                                              // [7]
         temperaturesMap.put("Krakow", 26.2);                                       // [16]
         temperaturesMap.put("Wroclaw", 24.8);                                      // [17]
         temperaturesMap.put("Warszawa", 25.2);                                     // [18]
-        temperaturesMap.put("Gdansk", 26.1); // [10]
-        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap)
+        temperaturesMap.put("Gdansk", 26.1);
+        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);// [11]
 
         //When
@@ -45,11 +46,13 @@ class WeatherForecastTest {                                              // [7]
         temperaturesMap.put("Wroclaw", 24.8);                                      // [17]
         temperaturesMap.put("Warszawa", 25.2);                                     // [18]
         temperaturesMap.put("Gdansk", 26.1);
-        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap)
+        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
-
         //When
-        double averageValues = weatherForecast.getAverage();
-        }
+        double expected = (5.0 + 25.5 + 26.2 + 24.8 + 25.2 + 26.1) / 5;
+        double average = temperaturesMap.getValue().getAvg();
+       //Then
+        Assertions.assertEquals(expected, average);
+    }
 */
 }
