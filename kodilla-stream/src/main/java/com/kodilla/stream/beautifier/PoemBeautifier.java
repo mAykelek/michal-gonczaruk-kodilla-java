@@ -3,6 +3,6 @@ package com.kodilla.stream.beautifier;
 public class PoemBeautifier {
     public void beautify(String a, String b, PoemDecorator poemDecorator) {
         String result = poemDecorator.decorate(a, b);
-        System.out.println("poem: " + result + "end of poem");
+        System.out.println("poem: " + result.toUpperCase() + " -end of poem...");
     }
 }
