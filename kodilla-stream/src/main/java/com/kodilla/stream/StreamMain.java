@@ -1,7 +1,9 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.Beauties;
+import com.kodilla.stream.beautifier.CreativeBeauties;
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.beautifier.PoemBeautifier2;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
@@ -28,5 +30,7 @@ public class StreamMain {
         poemBeautifier.beautify("CBA", "LOL", Beauties::CbaAndLol);
         poemBeautifier.beautify("ASD", "LOL", Beauties::AsdAndLol);
         poemBeautifier.beautify("ZXC", "LOL", Beauties::ZxcAndLol);
+        PoemBeautifier2 poemBeautifier2 = new PoemBeautifier2();
+        poemBeautifier2.beautify2(1, CreativeBeauties::creativeBeautify);
     }
 }

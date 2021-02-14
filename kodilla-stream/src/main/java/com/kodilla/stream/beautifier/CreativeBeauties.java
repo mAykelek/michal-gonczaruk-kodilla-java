@@ -1,7 +1,10 @@
 package com.kodilla.stream.beautifier;
 
 public class CreativeBeauties {
-    public static String myBeauty() {
-        return null;
+    public static int creativeBeautify(int a) {
+        return a;
+    }
+    public static String creativeBeautifyString(String b) {
+        return b;
     }
 }
