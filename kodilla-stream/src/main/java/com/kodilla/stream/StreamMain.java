@@ -24,7 +24,7 @@ public class StreamMain {
 
         System.out.println("Poem: ");
         PoemBeautifier poemBeautifier = new PoemBeautifier();
-        poemBeautifier.beautify("ABC", "LOL", Beauties::AbcAndLol, );
+        poemBeautifier.beautify("ABC", "LOL", Beauties::AbcAndLol);
         poemBeautifier.beautify("CBA", "LOL", Beauties::CbaAndLol);
         poemBeautifier.beautify("ASD", "LOL", Beauties::AsdAndLol);
         poemBeautifier.beautify("ZXC", "LOL", Beauties::ZxcAndLol);
