@@ -14,10 +14,10 @@ public class StreamMain {
 
         Forum theForum = new Forum();
         LocalDate localDate = LocalDate.now();
-        Map<String, ForumUser> newMap = theForum.getUserList().stream()
-                .filter(s -> s.getSex() == 'M')
-                .filter(d -> (localDate.getYear() - d.getDateOfBirth().getYear()) >= 20)
-                .filter(q -> q.getPostQuantity() > 1)
+        Map<Integer, ForumUser> newMap = theForum.getUserList().stream()
+                .filter(sex -> sex.getSex() == 'M')
+                .filter(year -> (localDate.getYear() - year.getDateOfBirth().getYear()) >= 20)
+                .filter(quantity -> quantity.getPostQuantity() > 1)
                 .collect(Collectors.toMap(ForumUser::getId, ForumUser -> ForumUser));
 
         System.out.println("# elements: " + newMap.size());
