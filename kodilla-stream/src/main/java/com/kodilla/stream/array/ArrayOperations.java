@@ -2,7 +2,7 @@ package com.kodilla.stream.array;
 
 public interface ArrayOperations {
 
-    static void getAverage(double[] numbers) {
+    static void getAverage(int[] numbers) {
 
     }
 }
