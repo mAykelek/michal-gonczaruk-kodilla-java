@@ -34,8 +34,8 @@ public class ArrayOperationsTestSuite implements ArrayOperations {
 
         //When
 
-        OptionalDouble avg = Array.getAverage(numbers);
-        double expectedAverage = 9.5; //example
+        double avg = ArrayOperations.getAverage(numbers);
+        double expectedAverage = 9.5;
 
         //Then
         assertEquals(expectedAverage, avg);
