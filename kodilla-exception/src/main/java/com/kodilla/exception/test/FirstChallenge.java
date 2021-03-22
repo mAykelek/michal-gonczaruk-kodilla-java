@@ -6,7 +6,7 @@ public class FirstChallenge {
         try {
             if (b==0);
         } catch (ArithmeticException e) {
-                System.out.println("Something went wrong... " + e);
+            throw new ArithmeticException();
             }
         finally {
             System.out.println("You can't divide by 0");
