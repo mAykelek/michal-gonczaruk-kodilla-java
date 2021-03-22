@@ -11,7 +11,7 @@ public class StreamMain {
 
     public static void main(String[] args) {
 
-
+/*
         Forum theForum = new Forum();
         LocalDate localDate = LocalDate.now();
         Map<Integer, ForumUser> newMap = theForum.getUserList().stream()
@@ -24,5 +24,12 @@ public class StreamMain {
         newMap.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
+
+
+ */
+LocalDate now = LocalDate.now();
+        System.out.println(now - now.minusDays(10));
+
+
     }
 }
