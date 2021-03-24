@@ -15,16 +15,17 @@ public class FirstChallenge {
      */
     public static void main(String[] args) {
         FirstChallenge firstChallenge = new FirstChallenge();
-        double result = firstChallenge.divide(3, 0);
 
-        try {
-            firstChallenge.divide(3, 0);
+
+        try  {
+            double result = firstChallenge.divide(3, 0);
+            System.out.println(result);
         }
         catch (ArithmeticException e) {
-            System.out.println("you cant divide by 0");
+            System.out.println("you tried to divide by 0");
         }
         finally {
-            System.out.println("result = " + result);
+            System.out.println("never divide by 0");
         }
     }
 }
