@@ -4,7 +4,7 @@ import com.kodilla.exception.io.FileReader;
 import com.kodilla.exception.io.FileReaderException;
 
 public class ExceptionModuleRunner {
-/*
+
     public static void main(String[] args) {
         FileReader fileReader = new FileReader();
 
@@ -14,6 +14,4 @@ public class ExceptionModuleRunner {
             System.out.println("Problem while reading a file!");
         }
     }
-
- */
 }
