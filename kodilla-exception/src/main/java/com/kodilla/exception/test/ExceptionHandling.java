@@ -8,7 +8,9 @@ public class ExceptionHandling {
         try {
             secondChallenge.probablyIWillThrowException(2, 6);
         } catch (Exception e) {
-            System.out.println("Problem with calling a method");
+            System.out.println("There is an exception..");
+        } finally {
+            System.out.println("Im gonna be here always..");
         }
     }
 }
