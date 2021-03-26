@@ -26,10 +26,12 @@ public class StreamMain {
                 .forEach(System.out::println);
 
 
- */
+
 LocalDate now = LocalDate.now();
         System.out.println(now - now.minusDays(10));
 
-
+*/
     }
+
+
 }
