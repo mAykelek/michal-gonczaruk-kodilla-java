@@ -28,15 +28,13 @@ class MovieStore {
 
         return booksTitlesWithTranslations;
     }
-
     public static void main(String[] args) {
-        Map<String, List<String>> movies = MovieStore.getMovies();
-        String collect = movies.entrySet().stream()
+        Map<String, List<String>> moviesMap = MovieStore.getMovies();
+        String movies = moviesMap.entrySet().stream()
                 .map(Object::toString)
-                .collect(Collectors.joining("!", "", ""));
-        System.out.println(collect);
+                .collect(Collectors.joining(" ! ", "", ""));
+        System.out.println(movies);
+
+
     }
-
 }
-
-
