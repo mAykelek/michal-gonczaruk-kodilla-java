@@ -7,4 +7,6 @@ findProject(':kodilla-exception:kodilla-good-patterns')?.name = 'kodilla-good-pa
 include 'gradle:kodilla-good-patterns'
 findProject(':gradle:kodilla-good-patterns')?.name = 'kodilla-good-patterns'
 include 'kodilla-good-patterns'
+include 'kodilla-stream'
+include 'kodilla-good-patterns'
 
