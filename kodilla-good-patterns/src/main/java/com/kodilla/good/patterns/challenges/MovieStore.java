@@ -27,12 +27,4 @@ class MovieStore {
 
         return booksTitlesWithTranslations;
     }
-    public static void main(String[] args) {
-        Map<String, List<String>> moviesMap = MovieStore.getMovies();
-        String movies = moviesMap.entrySet().stream()
-                .flatMap(entry -> entry.getValue().stream())
-                .map(Object::toString)
-                .collect(Collectors.joining(" ! ", "", ""));
-        System.out.println(movies);
-    }
 }
