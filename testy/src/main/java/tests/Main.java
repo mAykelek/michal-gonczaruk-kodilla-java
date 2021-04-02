@@ -1,27 +1,21 @@
 package tests;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Random;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
 
-        String letter = "A";
         Random randomGenerator = new Random();
-        Deque<String> objectQue = new ArrayDeque<>();
-        List<String> even = new ArrayList<>();
-        List<String> odd = new ArrayList<>();
-        for(int n=0; n<50; n++) {
-            String randoms = randomGenerator.nextInt(50) + letter;
+        Deque<Integer> objectQue = new ArrayDeque<>();
+        for (int n = 0; n < 50; n++) {
+            int randoms = randomGenerator.nextInt(50);
             objectQue.add(randoms);
-            if(randoms % 2 == 0)
-                { even.add(randoms); }
-            else
-                { odd.add(randoms); }
-            }
-        System.out.println("RANDOMS: " + objectQue);
-        System.out.println("EVEN: " + even);
-        System.out.println("ODD: " + odd);
-
+        }
+        Method method = new Method();
+        method.getList(objectQue);
     }
 }
+
 
