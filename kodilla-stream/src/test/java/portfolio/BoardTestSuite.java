@@ -7,6 +7,8 @@ import com.kodilla.stream.portfolio.User;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +42,7 @@ public class BoardTestSuite {
                     user2,
                     LocalDate.now().minusDays(20),
                     LocalDate.now().plusDays(30));
-            Task task2 = new Task("HQLs for analysis",
+            Task task2 = new Task("HQLs for analysis", // here
                     "Prepare some HQL queries for analysis",
                     user1,
                     user2,
@@ -52,13 +54,13 @@ public class BoardTestSuite {
                     user2,
                     LocalDate.now().minusDays(20),
                     LocalDate.now().plusDays(15));
-            Task task4 = new Task("Own logger",
+            Task task4 = new Task("Own logger",  // here
                     "Refactor company logger to meet our needs",
                     user3,
                     user2,
                     LocalDate.now().minusDays(10),
                     LocalDate.now().plusDays(25));
-            Task task5 = new Task("Optimize searching",
+            Task task5 = new Task("Optimize searching",  // here
                     "Archive data searching has to be optimized",
                     user4,
                     user2,
@@ -146,7 +148,7 @@ public class BoardTestSuite {
             //Given
 
         Board project = prepareTestData();
-
+        LocalDate now = LocalDate.now();
             //When
 
         List<TaskList> tasksInProgress = new ArrayList<>();
@@ -154,19 +156,10 @@ public class BoardTestSuite {
          long elements = project.getTaskLists().stream()
                 .filter(tasksInProgress::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(Task::getCreated)
-                .count();
-
-/*         long sumOfDays = project.getTaskLists().stream()
-                 .filter(tasksInProgress::contains)
-                 .flatMap(tl -> tl.getTasks().stream())
-                 */
-
-
-
-         //then
-
+                 .map(s -> ChronoUnit.DAYS.between(s.getCreated(), now))
+                 .average();
+        //Then
+        assertEquals(10, elements);
 
     }
-    
 }
