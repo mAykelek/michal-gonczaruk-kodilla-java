@@ -11,6 +11,7 @@ import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.OptionalDouble;
 
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -153,11 +154,12 @@ public class BoardTestSuite {
 
         List<TaskList> tasksInProgress = new ArrayList<>();
         tasksInProgress.add(new TaskList("In progress"));
-         long elements = project.getTaskLists().stream()
+        double elements = project.getTaskLists().stream()
                 .filter(tasksInProgress::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                 .map(s -> ChronoUnit.DAYS.between(s.getCreated(), now))
-                 .average();
+                 .mapToLong(s -> ChronoUnit.DAYS.between(s.getCreated(), now))
+                 .average().getAsDouble();
+
         //Then
         assertEquals(10, elements);
 
