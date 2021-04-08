@@ -9,13 +9,14 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;// [5]
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class WeatherForecastTestSuite {
-    /*
+
     @Mock
     private Temperatures temperaturesMock;
 
@@ -49,10 +50,25 @@ class WeatherForecastTestSuite {
         when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         //When
-        double expected = (5.0 + 25.5 + 26.2 + 24.8 + 25.2 + 26.1) / 5;
-        double average = temperaturesMap.getValue().getAvg();
-       //Then
-        Assertions.assertEquals(expected, average);
+        double average = weatherForecast.getAvg();
+        //Then
+        Assertions.assertEquals(25.56, average);
     }
-*/
+    @Test
+    void testGetMedianWithMock() {
+        //Given
+        Map<String, Double> temperaturesMap = new HashMap<>();
+        temperaturesMap.put("Wroclaw", 24.8);
+        temperaturesMap.put("Warszawa", 25.2);
+        temperaturesMap.put("Rzeszow", 25.5);
+        temperaturesMap.put("Gdansk", 26.1);
+        temperaturesMap.put("Krakow", 26.2);
+        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
+        WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
+        //When
+        List<Double> newList = weatherForecast.getSortedList();
+        double median = weatherForecast.getMedian(newList);
+        //Then
+        Assertions.assertEquals(25.5, median);
+    }
 }

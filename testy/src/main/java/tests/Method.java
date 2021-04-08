@@ -15,22 +15,12 @@ class Method {
     public void getList(Deque<String> objectQue) {
         while (objectQue.size() > 0){
             String poll = objectQue.poll();
+            all.add(poll);
             int pollLength = poll.length();
-            if(pollLength == 2) {
-                String afterpoll1 = poll.substring(0, 1);
-                if(afterpoll1 % 2 == 0) {
-                    evens.add(poll + "A");
-                } else {
-                    odds.add(poll + "A");
-                }
-            }
-            if(pollLength == 3) {
-                String afterpoll2 = poll.substring(0, 2);
-                if(afterpoll2 % 2 == 0) {
-                    evens.add(poll + "A");
-                } else {
-                    odds.add(poll + "A");
-                }
+            if(pollLength % 2 == 0) {
+                evens.add(poll);
+            } else {
+                odds.add(poll);
             }
         }
         System.out.println("All objects: " + all + "\n");

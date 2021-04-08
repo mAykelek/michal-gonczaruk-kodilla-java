@@ -1,12 +1,9 @@
 package com.kodilla.testing.weather.stub;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class WeatherForecast {
-    /*
+
     private Temperatures temperatures;
 
     public WeatherForecast(Temperatures temperatures) {
@@ -24,26 +21,42 @@ public class WeatherForecast {
     }
 
 
-    public double getAvg(List<Double> list) {
+    public double getAvg() {
+        Map<String, Double> resultMap = new HashMap<>();
         double result = 0;
-        for (Double tmp : list) {
-            result += tmp;
-        }
-        return result / list.size();
-        }
-    public Map<String, Double> getAvg2() {
-    Map<String, Double> resultMap2 = new HashMap<>();
 
-        for (Map.Entry<String, Double> temperature : temperatures.getTemperatures().entrySet()) {
-
-        resultMap2.put(temperature.getKey(), temperature.getValue() + 1.0)
+        for (Map.Entry<String, Double> tmp : temperatures.getTemperatures().entrySet()) {
+            resultMap.put(tmp.getKey(), tmp.getValue());
+            result = result + tmp.getValue();
+        }
+        return result / resultMap.size();
     }
-        return result;
-}
 
-     */
-}
+    public List<Double> getSortedList() {
+        Map<String, Double> resultMap = new HashMap<>();
+        List<Double> list = new LinkedList<>();
 
+        for (Map.Entry<String, Double> tmp : temperatures.getTemperatures().entrySet()) {
+            resultMap.put(tmp.getKey(), tmp.getValue());
+            list.add(tmp.getValue());
+        }
+        Collections.sort(list);
+        return list;
+    }
+
+    public Double getMedian(List<Double> list) {
+        if(list.size() % 2 == 0) { // if even
+            int middleElement = (list.size() / 2); // first middle  | 1 2 '3' 4 5 6 |
+            int middleElementPlusOne = middleElement + 1; //second middle  | 1 2 3 '4' 5 6 |
+            double getMiddleElement = list.get(middleElement);    //get first middle | 1 2 '3' 4 5 6 |
+            double getMiddleElementPlusOne = list.get(middleElementPlusOne); //get second middle | 1 2 3 '4' 5 6 |
+            return (getMiddleElement + getMiddleElementPlusOne) / 2; // return median  (3 + 4) / 2
+        } else { // if odd
+            int middle2 = ((list.size() -1) / 2); // get middle  (5 - 1) / 2
+            return list.get(middle2 + 1);  // return median     2 + 1 = 3 - middle element
+        }
+    }
+}
 
 
 
