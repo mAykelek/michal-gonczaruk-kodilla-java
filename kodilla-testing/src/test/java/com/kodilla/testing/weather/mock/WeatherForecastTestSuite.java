@@ -57,8 +57,8 @@ class WeatherForecastTestSuite {
         //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         //When
-        List<Double> newList = weatherForecast.getSortedList();
-        double median = weatherForecast.getMedian(newList);
+
+        double median = weatherForecast.getMedian();
         //Then
         Assertions.assertEquals(25.5, median);
     }

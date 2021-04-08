@@ -32,7 +32,8 @@ public class WeatherForecast {
         return result / resultMap.size();
     }
 
-    public List<Double> getSortedList() {
+    public Double getMedian() {
+
         Map<String, Double> resultMap = new HashMap<>();
         List<Double> list = new LinkedList<>();
 
@@ -41,10 +42,7 @@ public class WeatherForecast {
             list.add(tmp.getValue());
         }
         Collections.sort(list);
-        return list;
-    }
 
-    public Double getMedian(List<Double> list) {
         if(list.size() % 2 == 0) { // if even
             int middleElement = (list.size() / 2); // first middle  | 1 2 '3' 4 5 6 |
             int middleElementPlusOne = middleElement; //second middle  | 1 2 3 '4' 5 6 |
