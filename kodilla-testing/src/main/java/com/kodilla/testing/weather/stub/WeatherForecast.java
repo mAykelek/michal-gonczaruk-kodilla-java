@@ -47,13 +47,13 @@ public class WeatherForecast {
     public Double getMedian(List<Double> list) {
         if(list.size() % 2 == 0) { // if even
             int middleElement = (list.size() / 2); // first middle  | 1 2 '3' 4 5 6 |
-            int middleElementPlusOne = middleElement + 1; //second middle  | 1 2 3 '4' 5 6 |
-            double getMiddleElement = list.get(middleElement);    //get first middle | 1 2 '3' 4 5 6 |
+            int middleElementPlusOne = middleElement; //second middle  | 1 2 3 '4' 5 6 |
+            double getMiddleElement = list.get(middleElement -1);    //get first middle | 1 2 '3' 4 5 6 |
             double getMiddleElementPlusOne = list.get(middleElementPlusOne); //get second middle | 1 2 3 '4' 5 6 |
             return (getMiddleElement + getMiddleElementPlusOne) / 2; // return median  (3 + 4) / 2
         } else { // if odd
             int middle2 = ((list.size() -1) / 2); // get middle  (5 - 1) / 2
-            return list.get(middle2 + 1);  // return median     2 + 1 = 3 - middle element
+            return list.get(middle2);  // return median     2 - middle element
         }
     }
 }

@@ -11,7 +11,7 @@ class Main {
         temperaturesMap.add(25.5);
         temperaturesMap.add(26.1);
         temperaturesMap.add(26.2);
-        System.out.println(temperaturesMap);
+        System.out.println(temperaturesMap.size());
     }
 }
 
